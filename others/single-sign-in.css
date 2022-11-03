@@ -1,0 +1,373 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+#root,
+.script-container {
+  min-height: 100vh;
+}
+.cloud__container {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "logo form"
+    "footer footer";
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+.cloud__side-bg {
+  grid-area: logo;
+}
+.incorta-logo__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cloud-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+  grid-area: form;
+}
+.cloud-main-section {
+  flex: 1;
+  width: 496px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.cloud-main__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: #393e41;
+}
+.cloud-main__free-info {
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+  margin-top: 4px;
+  margin-bottom: unset;
+}
+.email-field__label,
+.password-field__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  display: flex;
+  margin-bottom: 8px;
+  display: flex;
+}
+.email-section,
+.password-section {
+  margin: 16px 0;
+}
+.password-wrapper {
+  position: relative;
+}
+.show-password-icon {
+  position: absolute;
+  top: 28%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+  width: 20px;
+  height: 20px;
+  background: url(/assets/images/show-password-icon.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+input.email-field__input,
+input.password-field__input {
+  background-color: rgb(255 255 255);
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #cfd5da;
+  border-radius: 6px;
+  width: 496px;
+  height: 48px;
+  padding: 4px 11px;
+  font-family: "Mulish", "sans-serif";
+}
+.email-field__invalid-email-input,
+.password-field__invalid-password-input {
+  color: red;
+  font-size: 12px;
+  font-family: "Mulish", "sans-serif";
+  display: flex;
+}
+.forgot-password {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  margin-top: 16px;
+  display: flex;
+  justify-content: end;
+}
+.forgot-password a {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  color: #858585;
+  text-decoration: none;
+  cursor: pointer;
+}
+.forgot-password a:hover {
+  text-decoration: underline;
+}
+.submit-form-button {
+  background-color: #231f20;
+  color: white;
+  border: unset;
+  border-radius: 4px;
+  width: 496px;
+  height: 48px;
+  margin: 32.15px 0 42px 0;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.or-line-section {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "d1 or d3"
+    "d2 or d4";
+}
+.or-line-d1 {
+  grid-area: d1;
+  height: 50%;
+}
+.or-line-d2 {
+  grid-area: d2;
+  border-top: 1px solid #c8c7bb;
+  height: 50%;
+}
+.or-line-d3 {
+  grid-area: d3;
+  height: 50%;
+}
+.or-line-d4 {
+  border-top: 1px solid #c8c7bb;
+  grid-area: d4;
+  height: 50%;
+}
+.or-line-or {
+  grid-area: or;
+  margin: 4px;
+  color: #5f6972;
+}
+.google-and-microsoft {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+  margin: 16px 0 32px 0;
+}
+.google-logo {
+  background: url(/assets/images/google-logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 31.36px;
+  height: 32px;
+  cursor: pointer;
+}
+.microsoft-logo {
+  background: url(/assets/images/microsoft-logo.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.terms-agreement__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #5f6972;
+}
+.cloud-admin-portal-link {
+  color: -webkit-link;
+  cursor: pointer;
+}
+.cloud-admin-portal-link:hover {
+  text-decoration: underline;
+}
+
+.terms-agreement__wrapper a {
+  text-decoration: none;
+  color: -webkit-link;
+  cursor: pointer;
+}
+.terms-agreement__wrapper a:hover {
+  text-decoration: underline;
+}
+
+.footer {
+  width: 100%;
+  grid-area: footer;
+  margin-bottom: 33px;
+}
+.footer p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #5f6972;
+}
+.trustees-logos {
+  display: flex;
+  justify-content: center;
+  gap: 144px;
+}
+
+@media screen and (max-width: 1512px) {
+  .comcast-logo-svg {
+    width: 99.7px;
+    height: 35px;
+  }
+  .cisco-logo-svg {
+    width: 66.4px;
+    height: 35px;
+  }
+  .shutterfly-logo-svg {
+    width: 104.25px;
+    height: 24px;
+  }
+  .vitamix-logo-svg {
+    width: 106px;
+    height: 24px;
+  }
+  .redstone-logo-svg {
+    width: 112px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .incorta-black-logo-svg {
+    width: 130.82px;
+    height: 144px;
+  }
+  .cloud-main__title {
+    font-size: 24px;
+  }
+  .comcast-logo-svg {
+    width: 94px;
+    height: 33px;
+  }
+  .cisco-logo-svg {
+    width: 66.4px;
+    height: 35px;
+  }
+  .shutterfly-logo-svg {
+    width: 104.25px;
+    height: 24px;
+  }
+  .vitamix-logo-svg {
+    width: 106px;
+    height: 24px;
+  }
+  .redstone-logo-svg {
+    width: 112px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .cloud__container {
+    grid-template-columns: 1fr 2fr;
+  }
+  .cloud-main {
+    align-items: center;
+  }
+  .trustees-logos {
+    justify-content: space-around;
+    gap: unset;
+  }
+  .comcast-logo-svg {
+    width: 94px;
+    height: 33px;
+  }
+  .cisco-logo-svg {
+    width: 66.4px;
+    height: 35px;
+  }
+  .shutterfly-logo-svg {
+    width: 104.25px;
+    height: 24px;
+  }
+  .vitamix-logo-svg {
+    width: 106px;
+    height: 24px;
+  }
+  .redstone-logo-svg {
+    width: 106px;
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 766px) {
+  .cloud__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas:
+      "logo"
+      "form";
+  }
+  .incorta-black-logo-svg {
+    height: 67.53px;
+    width: 65.41px;
+  }
+  .cloud-main__title {
+    margin-bottom: 45px;
+  }
+  .footer {
+    display: none;
+  }
+  .cloud-main-section,
+  input.email-field__input,
+  input.password-field__input,
+  .submit-form-button {
+    width: 496px;
+  }
+  .submit-form-button {
+    margin: 24px 0 33px 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .cloud-main-section,
+  input.email-field__input,
+  input.password-field__input,
+  .submit-form-button {
+    width: 252px;
+  }
+  .submit-form-button {
+    margin: 19px 0 32px 0;
+  }
+  .terms-agreement__wrapper label {
+    font-size: 12px;
+  }
+}
